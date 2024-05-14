@@ -1,0 +1,66 @@
+@port = 3000
+@host = http://localhost:{{port}}
+
+//Devuelve un array con todos los proyectos
+GET {{host}}/api/projects
+
+###
+
+POST {{host}}/api/projects
+Content-Type: application/json
+
+{
+    "name": "Total Facility Managment",
+    "description": "Software de gestión logística presenta una solución integral para optimizar y perfeccionar los procesos logísticos dentro de nuestra empresa. Diseñado con la premisa de mejorar la eficiencia operativa, aborda las complejidades de la cadena de suministro, proporcionando herramientas avanzadas y soluciones tecnológicas.",
+    "image": "https://i.postimg.cc/dV8G9MVK/Captura-desde-2024-05-02-12-35-15.png",
+    "link": "https://github.com/Sonia-Flores/TFM_Logistica_Back/tree/master"
+ 
+}
+
+###
+PUT {{host}}/api/projects/66320e86d94751e100bbfe2c
+
+Content-Type: application/json
+
+{
+    "name": "Proyecto de prueba editado",
+    "description": "Descripción abreviada del proyecto",
+    "image": "imagenprueba"
+ 
+}
+
+###
+DELETE {{host}}/api/projects/66320fa88feee6abe534a844
+
+###
+//Devuelve un array con todas las experiencias
+GET {{host}}/api/experiences
+
+###
+POST {{host}}/api/experiences
+Content-Type: application/json
+
+{
+    "company": "Grupo Epelsa",
+    "position": "Desarrolladora Web",
+    "description": "Desarrollo y mantenimiento de API (basada en NodeJS/TypeScript)",
+    "time": "9 meses"
+}
+
+
+# {
+#     "company": "Total Facility Managment",
+#     "position": "Desarrolladora Web",
+#     "description": "Desarrollo de aplicación de logística dedicada a la gestión de almacenes dentro de una misma empresa",
+#     "time": "3 meses"
+# }
+
+# {
+#     "company": "IDFashion",
+#     "position": "Desarrolladora Web",
+#     "description": "Desarrollo y mantenimiento de e-commerce basado en Angular17 y NodeJS/Javascript",
+#     "time": "9 meses"
+# }
+
+###
+DELETE {{host}}/api/experiences/664321d629deb45ed5d193a0
